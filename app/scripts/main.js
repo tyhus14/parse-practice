@@ -5,18 +5,17 @@ $(function(){
  
   window.items = new ItemsCollection();
 
-		setInterval(function() {
+		
 
-		  items.fetch({
+ items.fetch({
 				success: function(){
 					items.each(function(item){
 						new ListView({model: item});
 					})	
 				},
 
-			}, 1000);
-
-		});
+			})
+	
 
 
 	 $('.save-button').click(function(){
@@ -30,8 +29,8 @@ $(function(){
 
 		$('.js-name').val('');
 		$('.js-age').val('');
-	 });
 
 
+	 })
 
 });
